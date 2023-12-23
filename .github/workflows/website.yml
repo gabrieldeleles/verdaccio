@@ -78,7 +78,7 @@ jobs:
 
       - name: 🔥 Deploy Production Netlify
         if: (github.event_name == 'push' && github.ref == 'refs/heads/master') || github.event_name == 'workflow_dispatch'
-        uses: semoal/action-netlify-deploy@1a53f098745bf78555d11b436f5ee3af87e6b566
+        uses: verdaccio/action-netlify-deploy@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           netlify-auth-token: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -93,7 +93,7 @@ jobs:
 
       - name: 🤖 Deploy Preview Netlify
         if: github.repository == 'verdaccio/verdaccio'
-        uses: semoal/action-netlify-deploy@1a53f098745bf78555d11b436f5ee3af87e6b566
+        uses: verdaccio/action-netlify-deploy@master
         id: netlify_preview
         with:
           draft: true
