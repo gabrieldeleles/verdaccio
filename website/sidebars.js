@@ -4,7 +4,7 @@ module.exports = {
   docs: [
     {
       type: 'category',
-      label: 'Introduction',
+      label: 'Introduction_test',
       items: [
         'installation',
         'what-is-verdaccio',
